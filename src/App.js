@@ -11,6 +11,7 @@ import "./App.css";
 
 function Map() {
   const [selectedPark, setSelectedPark] = useState(null);
+
   return (
     <GoogleMap
       defaultZoom={10}
@@ -60,9 +61,11 @@ function App() {
   return (
     <div style={{ height: "100vh", width: "100vw" }}>
       <WrappedMap
-        /* googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`} */
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`}
-        loadingElement={<div style={{ height: "100%" }} />}
+        /* googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.API_KEY}`} */
+        /* googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`} */
+        /* googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places" */
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoz2SHkwEIzGjGC61i6YNwY3W036WFFsg&callback=initMap"
+        loadingElement={<div style={{ height: "0%" }} />}
         containerElement={<div style={{ height: "100%" }} />}
         mapElement={<div style={{ height: "100%" }} />}
       />
